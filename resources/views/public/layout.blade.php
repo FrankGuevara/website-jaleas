@@ -4,12 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
-        integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>@yield('title') | {{ config('app.name') }} </title>
     @yield('scripts')
@@ -20,7 +17,7 @@
 <body>
     <header>
 
-        <div class=" overflow-hidden sm:hi">
+        <div class=" overflow-hidden ">
             <div
                 class="bg-white grayscale-0 {{ Route::is('index') ? 'fixed' : '' }} w-full z-10 border border-gray-300">
                 <nav class=" font-semibold flex justify-between text-[18px] w-[90%] m-auto  relative py-3 z-1000">
@@ -36,7 +33,7 @@
                         <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500"><a
                                 href="#">Productos</a></div>
                         <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500"><a
-                                href="#">Contactanos</a></div>
+                                href="{{ route('contact') }}">Contactanos</a></div>
 
                     </div>
 
@@ -47,7 +44,7 @@
     </header>
 
 
-    <main class="">
+    <main class="overflow-hidden">
         @yield('main')
         <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20."
             class="float" target="_blank">
@@ -56,8 +53,13 @@
     </main>
     <footer class="bg-black w-full h-96 text-white">
         <div class="w-[70%] m-auto grid grid-cols-3 py-16">
-            <div class="text-center w-[80%] mx-auto">
-                <img src="{{ asset('images/footer-img.jpeg') }}" alt="">
+            <div class="text-center w-[80%] mx-auto grid grid-rows-[30%,70%] h-full">
+                <div class="w-full h-full">
+                    <img src="{{ asset('images/footer-img.jpeg') }}" alt="" >
+                </div>
+                <div class="font-semibold text-[15px]">
+                    "Vendemos servicios y distribuimos calidad"
+                </div>
             </div>
             <div class="flex justify-center">
                 <div class="">

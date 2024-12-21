@@ -16,12 +16,13 @@
     background: rgba(0, 0, 0, 0.3); /* Oscurece el fondo */
     z-index: 1;
 }
-
+/*
 .header-text {
     position: relative;
 
-    z-index: 2; /* Asegúrate de que el texto esté por encima del overlay */
+    z-index: 2; 
     text-align: center;
     padding: 20px;
 
 }
+/*

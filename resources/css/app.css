@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-*{
-    border: 1px solid;
-}
-    */
+
+
+   
     .float {
         position: fixed;
         width: 60px;

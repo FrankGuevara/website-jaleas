@@ -7,6 +7,7 @@
 @section('title')
     Inicio
 @endsection
+    
 
 @section('header-img')
     <div class="header-image h-screen">
@@ -20,7 +21,8 @@
         </div>
         <div
             class="mt-[20%] text-white w-[60%] text-[20px] mx-auto font-semibold text-center
-    animate__animated  animate__backInUp header-text">
+    animate__animated  animate__backInUp  relative z-[2] p-5">
+
             “ Somos una distribuidora especializada en ofrecer una amplia gama de productos escenciales para la
             industria
             alimentaria y gastronomica, desde harinas de alta calidad hasta grasas, mantecas, azucar, granos y
@@ -114,15 +116,15 @@
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.remove('opacity-0'); // Hacer visible
+                        entry.target.classList.remove('opacity-0'); // Hacer visibl
                         if (entry.target.classList.contains('animate-on-scroll-left')) {
                             entry.target.classList.add(
-                                'animate__fadeInLeft'); // Animación desde la izquierda
+                                'animate__fadeInLeft');
                         } else if (entry.target.classList.contains('animate-on-scroll-right')) {
                             entry.target.classList.add(
-                                'animate__fadeInRight'); // Animación desde la derecha
+                                'animate__fadeInRight');
                         }
-                        observer.unobserve(entry.target); // Detener la observación
+                        observer.unobserve(entry.target);
                     }
                 });
             });
