@@ -16,13 +16,14 @@
         <div class="w-full text-center font-bold my-18 max-sm:text-[25px] sm:text-[38px]">
             ¡Ponte en contacto con nosotros!
         </div>
-        <div class="sm:flex  sm:my-8 max-sm:mb-4 overflow-hidden max-sm:grid max-sm:grid-rows-2 ">
+        <div class="sm:flex  sm:my-8 max-sm:mb-4 overflow-hidden max-sm:grid max-sm:grid-rows-2 font-semibold">
             <div class="w-3/4  sm:p-8  max-sm:m-auto">
-                <form action="{{ route('contact-post') }}" method="POST" class="space-y-8 w-full max-sm:w-full"
+                <form action="{{ route('contact-post') }}" method="POST" class="space-y-8 w-full max-sm:w-full text-lg bg-orange-600
+                overflow-hidden p-10
                     id="contact-form">
                     @csrf
                     <div>
-                        <label for="name" class="block mb-2 text-[22px] max-sm:text-sm sm:font-medium text-gray-900">Nombre
+                        <label for="name" class="block mb-2  max-sm:text-sm sm:font-medium text-gray-900">Nombre
                             completo:</label>
                         <input type="text" id="name" name="name"
                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 
@@ -34,11 +35,11 @@
 
                     </div>
                     <div>
-                        <label for="email" class="block mb-2 text-[22px] font-medium text-gray-900 max-sm:text-sm">Correo de
+                        <label for="email" class="block mb-2 font-medium text-gray-900 max-sm:text-sm">Correo de
                             contacto:</label>
                         <input type="email" id="email" name="email"
                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5
-                        max-sm:text-sm text-[22px]  "
+                        max-sm:text-sm   "
                             placeholder="example@mail.com" required>
                         @error('email')
                             <div class="text-red-600 alert alert-danger">{{ $message }}</div>
@@ -50,7 +51,7 @@
                         <label for="message" class="block mb-2  font-medium text-gray-900 max-sm:text-sm">Asunto:</label>
                         <textarea id="message" rows="6" name="message"
                             class="block p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500
-                        max-sm:text-sm "
+                        max-sm:text-sm resize-none"
                             placeholder="Escribenos..."></textarea>
                         @error('message')
                             <div class="text-red-600 max-sm:text-sm">{{ $message }}</div>
@@ -68,14 +69,14 @@
                     @endif
                     <div id='loader'></div>
                     <button type="submit "
-                        class=" font-bold py-2 px-4 rounded-full btn-submit max-sm:m-auto max-sm:text-sm  max-sm:block ">Enviar</button>
+                        class=" font-bold   btn-submit max-sm:m-auto max-sm:text-sm  max-sm:block bg-black px-6 py-2 text-white">Enviar</button>
                 </form>
 
             </div>
-            <div class="w-1/2 flex justify-center items-center  max-sm:h-96 max-sm:pt-4 text-xl">
+            <div class="w-1/2 flex justify-center items-center  max-sm:h-96 max-sm:pt-4 text-lg">
                 <div class="">
                     <div class="item-detail">
-                        <div class=" text-orange-600 text-[25px] font-semibold ">
+                        <div class=" text-orange-600 text-[25px] font-bold my-3">
                             <i class="fa fa-map-marker mr-4" aria-hidden="true"></i>Direccion
                         </div>
                         <div class="">
@@ -83,7 +84,7 @@
                         </div>
                     </div>
                     <div class="item-detail my-12">
-                        <div class="text-orange-600 text-[25px] font-semibold">
+                        <div class="text-orange-600 text-[25px] font-bold my-3">
                             <i class="fa fa-phone mr-4" aria-hidden="true"></i>Contacto
                         </div>
                         <div class="">
@@ -92,16 +93,16 @@
                         </div>
                     </div>
                     <div class="item-detail my-12">
-                        <div class="text-orange-600 text-[25px] font-semibold">
-                            <i class="fa fa-phone mr-4 " aria-hidden="true"></i>Siguenos
+                        <div class="text-orange-600 text-[25px] font-bold my-3">
+                            <i class="fa fa-thumbs-up mr-4 " aria-hidden="true"></i>Siguenos
                         </div>
                         <div class="">
-                            <a href="https://www.facebook.com/profile.php?id=61560104366460&mibextid=LQQJ4d" class="block">
-                                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                            <a href="https://www.facebook.com/profile.php?id=61560104366460&mibextid=LQQJ4d" class="flex items-center ">
+                                <i class="fa fa-facebook-square fa-2x mx-2" aria-hidden="true"></i>
                                 <span>Facebook</span>
                             </a>
-                            <a href="https://www.instagram.com/jaleasdelpino.sv?igsh=ajFvejBnZHZleWpv" class=" block">
-                                <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                            <a href="https://www.instagram.com/jaleasdelpino.sv?igsh=ajFvejBnZHZleWpv" class="flex items-center my-2">
+                                <i class="fa fa-instagram fa-2x mx-2" aria-hidden="true"></i>
                                 <span>Instagram</span>
                             </a>
                         </div>

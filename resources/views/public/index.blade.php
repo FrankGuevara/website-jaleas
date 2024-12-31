@@ -7,7 +7,7 @@
 @section('title')
     Inicio
 @endsection
-    
+
 
 @section('header-img')
     <div class="header-image h-screen">
@@ -74,13 +74,44 @@
 
     </div>
 
+    <div class="mx-auto my-[5%] font-bold">
+        <div class="w-[85%] m-auto leading-none  pb-2 border-green-800">
+            <div class="text-[18px] p-0 m-0 text-center">DESCUBRA NUESTROS PUNTOS DE</div>
+            <div class="text-green-800 text-[45px] m-0 text-center">PROCESAMIENTO | DISTRIBUCIÓN</div>
+        </div>
+        <div class="mt-[7%] h-[80vh] bg-black">
+            <div class="grid grid-cols-3 w-[90%] m-auto gap-4">
+                <!-- Planta Jaleas -->
+                <div class="flex flex-col justify-center items-center h-[80vh] text-center p-4 text-white  ">
+                    <h3 class="text-xl font-bold text-orange-500 mb-2">PLANTA JALEAS</h3>
+                    <p class="text-sm  mb-4">KM 10 1/2 A UN COSTADO DE VIDRERÍA VENECIA, SAN MARTÍN, SAN SALVADOR</p>
+                    <img src="{{ asset('images/index/planta-jaleas.jpg') }}" alt="planta jaleas" class="w-[350px] h-[400px] object-cover rounded-md">
+                </div>
+                <!-- Bodega Central -->
+                <div class="flex flex-col justify-center items-center h-[80vh] text-center p-4 bg-white ">
+                    <h3 class="text-lg font-bold text-orange-500 mb-2">BODEGA CENTRAL</h3>
+                    <p class="text-sm  mb-4">KM 10 1/2 A UN COSTADO DE VIDRERÍA VENECIA, SAN MARTÍN, SAN SALVADOR</p>
+                    <img src="{{ asset('images/index/bodega-central.jpg') }}" alt="bodega central" class="w-[350px] h-[400px] object-cover rounded-md">
+                </div>
+                <!-- Planta Molinos -->
+                <div class="flex flex-col justify-center items-center h-[80vh] text-center p-4 text-white">
+                    <h3 class="text-lg font-bold text-orange-500 mb-2">PLANTA MOLINOS</h3>
+                    <p class="text-sm  mb-4">KM 10 1/2 A UN COSTADO DE VIDRERÍA VENECIA, SAN MARTÍN, SAN SALVADOR</p>
+                    <img src="{{ asset('images/index/planta-molinos.png') }}" alt="molinos" class="w-[350px] h-[400px] object-cover rounded-md">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
     <div class=" w-[85%] mx-auto my-[5%] font-bold">
         <div class="text-center leading-none border-b-[2px] pb-2 border-green-800  ">
             <div class="text-[18px] p-0 m-0">NUESTROS PRINCIPALES</div>
             <div class="text-green-800 text-[45px] m-0">PROVEEDORES</div>
         </div>
-        <div class="cards mt-[7%]">
-            <div class="grid grid-cols-4">
+        <div class=" mt-[7%]">
+            <div class="grid grid-cols-4 w-[80%] m-auto ">
                 <div class="flex justify-center items-center">
                     <div class="">
                         <img src="{{ asset('images/suppliers/agropal.png') }}" alt="copeagropal">

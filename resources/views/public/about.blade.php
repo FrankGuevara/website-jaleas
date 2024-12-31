@@ -13,10 +13,10 @@
             </div>
             <div class="text-white flex justify-center items-center">
                 <div class="w-[60%] font-medium  text-justify text-xl">
-                    <span class="text-orange-500 font-bold">Jaleas del Pino</span> es una empresa salvadoreña con más de 10 años en el mercado, 
+                    <span class="text-orange-500 font-bold">Jaleas del Pino</span> es una empresa salvadoreña con más de 9 años en el mercado, 
                     dedicada a la producción y comercialización de jaleas de piña, esencias y harinas de arroz asi como a la comercialización de harinas de trigo.  
                     <br><br>
-                    En 'Jaleas del Pino' nos comprometemos con la calidad y la innovación en cada uno de nuestros productos. A lo largo de los años, hemos logrado posicionarnos como una empresa líder en el mercado local, satisfaciendo las necesidades de nuestros clientes con productos naturales y de alta calidad. Además, trabajamos con proveedores estratégicos para ofrecer productos frescos y de primera a nuestros consumidores.
+                    Nosotros nos comprometemos con la calidad y la innovación en cada uno de nuestros productos. A lo largo de los años, hemos logrado posicionarnos como una empresa líder en el mercado local, satisfaciendo las necesidades de nuestros clientes con productos naturales y de alta calidad. Además, trabajamos con proveedores estratégicos para ofrecer productos frescos y de primera a nuestros consumidores.
                 </div>
 
             </div>
@@ -55,9 +55,10 @@
                 </div>
                 <div class="w-1/3 grid grid-rows-2  ">
                     <div class="flex justify-center h-auto">
+                        <div class="font-black text-black text-5xl flex items-center justify-center max-lg:text-3xl">+</div>
                         <div class="value text-center text-orange-500 font-bold  flex items-center justify-center"
                             style="font-size: clamp(2rem, 5vw, 100px);" akhi="500">0</div>
-                        <div class="font-black text-black text-5xl flex items-center justify-center max-lg:text-3xl">+</div>
+                        
                     </div>
                     <div class="w-full text-center h-auto max-sm:mt-4 mt-8 max-ssm:mt-0 font-bold max-lg:text-[11px]">
                         Clientes que han depositado su confianza en nosotros.
@@ -82,7 +83,7 @@
                             class="col-span-1 text-justify sm:p-5 max-sm:pt-12 sm:mx-auto max-lg:p-5 lg:text-base max-md:text-[11px] sm:m-auto max-lg:text-[12px] max-sm:text-[11px] max-sm:my-0">
                             <div class="font-bold flex flex-col items-center justify-center text-center sm:px-0">
                                 <div>NUESTRA</div>
-                                <div class="pb-3 lg:text-4xl font-bold max-ssm:text-[12px]">MISIÓN</div>
+                                <div class="pb-3 lg:text-4xl font-bold max-ssm:text-[12px] text-orange-500">MISIÓN</div>
                             </div>
                             <div>
                                 Nuestro propósito es <span class="font-bold">PRODUCIR</span> y
@@ -104,7 +105,7 @@
                             class="col-span-1 text-justify sm:p-5 max-sm:pb-12 sm:mx-auto max-lg:p-5 lg:text-base max-md:text-[11px] sm:m-auto max-lg:text-[12px] max-sm:text-[11px] max-sm:my-0">
                             <div class="font-bold flex flex-col items-center justify-center text-center sm:px-0">
                                 <div>NUESTRA</div>
-                                <div class="pb-3 lg:text-4xl font-bold max-ssm:text-[12px]">VISIÓN</div>
+                                <div class="pb-3 lg:text-4xl font-bold max-ssm:text-[12px] text-orange-500">VISIÓN</div>
                             </div>
                             <div>
                                 Nos comprometemos en ser una empresa <span class="font-bold">LIDER</span> en la
