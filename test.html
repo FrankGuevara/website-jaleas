@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel con Tailwind, jQuery y Owl Carousel</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Carrusel -->
+  <div class="container mx-auto px-4 mt-6">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="https://via.placeholder.com/600x300/FF5733/FFFFFF?text=Slide+1" alt="Slide 1" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div class="item">
+        <img src="https://via.placeholder.com/600x300/33FF57/FFFFFF?text=Slide+2" alt="Slide 2" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div class="item">
+        <img src="https://via.placeholder.com/600x300/3357FF/FFFFFF?text=Slide+3" alt="Slide 3" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div class="item">
+        <img src="https://via.placeholder.com/600x300/FF5733/FFFFFF?text=Slide+4" alt="Slide 4" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div class="item">
+        <img src="https://via.placeholder.com/600x300/33FF57/FFFFFF?text=Slide+5" alt="Slide 5" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+    </div>
+  </div>
+
+  <!-- Script de inicialización -->
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 4, // Mostrar 4 elementos por defecto
+        margin: 20, // Espaciado entre elementos
+        autoplay: true, // Activar autoplay
+        autoplayTimeout: 3000, // Tiempo entre slides
+        autoplayHoverPause: true, // Pausar autoplay al pasar el ratón
+        loop: true, // Permitir bucle infinito
+        nav: true, // Mostrar botones de navegación
+        responsive: { // Configuración responsiva
+          0: { items: 1 },
+          480: { items: 2 },
+          768: { items: 3 },
+          1024: { items: 4 }
+        },
+        navText: [
+          '<button class="text-white bg-gray-800 hover:bg-gray-700 p-2 rounded-full">&lt;</button>',
+          '<button class="text-white bg-gray-800 hover:bg-gray-700 p-2 rounded-full">&gt;</button>'
+        ]
+      });
+    });
+  </script>
+
+</body>
+</html>

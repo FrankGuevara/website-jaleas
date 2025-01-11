@@ -4,11 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>@yield('title') | {{ config('app.name') }} </title>
+
+    <meta name="description"
+        content="Distribuidora del Pino en El Salvador: Especialistas en jaleas, harinas y más. Productos de alta calidad para tu hogar y negocio.">
+    <meta name="keywords"
+        content="jaleas del pino, distribuidora del pino, distribuidoras en El Salvador, distribuidora de harinas, productos alimenticios, harinas en El Salvador">
+    <meta name="author" content="Distribuidora del Pino">
+    <meta name="robots" content="index, follow">
+
     @yield('scripts')
     @vite('resources/css/app.css')
     @yield('styles')
@@ -33,7 +41,7 @@
                         <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500"><a
                                 href="#">Productos</a></div>
                         <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500"><a
-                                href="{{ route('contact') }}">Contactanos</a></div>
+                                href="{{ route('contact') }}">Contáctanos</a></div>
 
                     </div>
 
@@ -50,12 +58,13 @@
             class="float" target="_blank">
             <i class="lni lni-whatsapp my-float"></i>
         </a>
+
     </main>
-    <footer class="bg-black w-full h-96 text-white">
-        <div class="w-[70%] m-auto grid grid-cols-3 py-16">
+    <footer class="bg-black w-full h-96 text-white overflow-hidden mt-40">
+        <div class="w-[70%] m-auto grid grid-cols-3 py-12">
             <div class="text-center w-[80%] mx-auto grid grid-rows-[30%,70%] h-full">
                 <div class="w-full h-full">
-                    <img src="{{ asset('images/footer-img.jpeg') }}" alt="" >
+                    <img src="{{ asset('images/footer-img.jpeg') }}" alt="">
                 </div>
                 <div class="font-semibold text-[15px]">
                     "Vendemos servicios y distribuimos calidad"
@@ -81,7 +90,7 @@
                             <span class="pl-4 font-semibold"> svjaleasdelpino@gmail.com</span>
                         </a>
                         <a href="/" class="font-bold flex items-center">
-                            <i class="fa fa-phone text-3xl"></i>
+                            <i class="lni lni-telephone-3 text-4xl"></i>
                             <span class="pl-4 font-semibold">+503 7512-3153</span>
                         </a>
                         <a href="/" class="font-bold flex items-center">
@@ -92,7 +101,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full">
+        <div class="w-full pb-4">
             <div class="text-center">Jaleas del Pino S.A de C.V &copy; 2024 | Todos los derechos reservados.</div>
         </div>
     </footer>
