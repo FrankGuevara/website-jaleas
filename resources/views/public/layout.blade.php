@@ -27,13 +27,13 @@
 
         <div class=" overflow-hidden ">
             <div
-                class="bg-white grayscale-0 {{ Route::is('index') ? 'fixed' : '' }} w-full z-10 border border-gray-300">
+                class="bg-white grayscale-0 {{ Route::is('index') ? 'fixed' : '' }} w-full z-50 border border-gray-300">
                 <nav class=" font-semibold flex justify-between text-[18px] w-[90%] m-auto  relative py-3 z-1000">
 
                     <a href="{{ route('index') }}">
-                        <img width="300px" height="40px" src="{{ asset('images/logo.jpeg') }}" alt="logo-image" />
+                        <img width="300px" height="40px" src="{{ asset('images/logo.jpeg') }}" alt="logo-jaleas" />
                     </a>
-                    <div class="flex">
+                    <div class="flex font-bold">
                         <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500"><a
                                 href="{{ route('index') }}">Inicio</a></div>
                         <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500"><a
@@ -47,7 +47,9 @@
 
                 </nav>
             </div>
-            @yield('header-img')
+            <div class="header-image">
+                @yield('header-img')
+            </div>
         </div>
     </header>
 
@@ -61,8 +63,8 @@
 
     </main>
     <footer class="bg-black w-full h-96 text-white overflow-hidden mt-40">
-        <div class="w-[70%] m-auto grid grid-cols-3 py-12">
-            <div class="text-center w-[80%] mx-auto grid grid-rows-[30%,70%] h-full">
+        <div class="w-[70%] m-auto grid grid-cols-3 py-12  small:grid ">
+            <div class="text-center w-[80%] mx-auto   grid grid-rows-[30%,70%] h-full ">
                 <div class="w-full h-full">
                     <img src="{{ asset('images/footer-img.jpeg') }}" alt="">
                 </div>
@@ -102,7 +104,7 @@
             </div>
         </div>
         <div class="w-full pb-4">
-            <div class="text-center">Jaleas del Pino S.A de C.V &copy; 2024 | Todos los derechos reservados.</div>
+            <div class="text-center">Jaleas del Pino S.A de C.V &copy; 2025 | Todos los derechos reservados.</div>
         </div>
     </footer>
 </body>

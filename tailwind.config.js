@@ -6,7 +6,11 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'small': {max:'414px'}, // Define un breakpoint para pantallas de 414px
+      },
+    },
   },
   plugins: [],
 }

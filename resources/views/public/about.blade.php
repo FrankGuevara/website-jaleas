@@ -9,7 +9,7 @@
     <div class=" bg-black w-full h-[calc(100vh-90px)] ">
         <div class="w-full  grid grid-cols-[50%,50%]">
             <div class="h-full">
-                <img class="bg-cover h-screen " src="{{ asset('/images/about/about-img.png') }}" alt="flota">
+                <img class="bg-cover h-screen " src="{{ asset('/images/about/about-img.png  ') }}" alt="flota">
             </div>
             <div class="text-white flex justify-center items-center">
                 <div class="w-[60%] font-medium  text-justify text-xl">
@@ -33,7 +33,7 @@
                 <div class="w-1/3  p-0  grid grid-rows-2 ">
                     <div class="flex justify-center h-auto y-2">
                         <div class="font-black text-black text-5xl flex items-center justify-center max-lg:text-3xl">+</div>
-                        <div class="value text-center text-orange-500 font-bold b flex items-center justify-center"
+                        <div class="value text-center text-orange-500 font-extrabold b flex items-center justify-center"
                             style="font-size: clamp(2rem, 5vw, 100px);" akhi="9">0</div>
 
                     </div>
@@ -46,7 +46,7 @@
                     <div class="flex justify-center h-auto">
                         <div class="font-black text-black text-5xl flex items-center justify-center max-lg:text-3xl">+</div>
 
-                        <div class="value text-center text-orange-500 font-bold  flex items-center justify-center"
+                        <div class="value text-center text-orange-500 font-extrabold  flex items-center justify-center"
                             style="font-size: clamp(2rem, 5vw, 100px);" akhi="60">0</div>
                     </div>
                     <div class="w-full text-center h-auto mt-8 max-sm:mt-4 max-ssm:mt-0 font-bold max-lg:text-[11px]">
@@ -56,7 +56,7 @@
                 <div class="w-1/3 grid grid-rows-2  ">
                     <div class="flex justify-center h-auto">
                         <div class="font-black text-black text-5xl flex items-center justify-center max-lg:text-3xl">+</div>
-                        <div class="value text-center text-orange-500 font-bold  flex items-center justify-center"
+                        <div class="value text-center text-orange-500 font-extrabold  flex items-center justify-center"
                             style="font-size: clamp(2rem, 5vw, 100px);" akhi="500">0</div>
                         
                     </div>

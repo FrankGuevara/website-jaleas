@@ -16,211 +16,222 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
-            .owl-prev:hover, .owl-next:hover {
-              background-color: transparent !important; 
-            }
-          </style>
-          
+    <style>
+        .owl-prev:hover,
+        .owl-next:hover {
+            background-color: transparent !important;
+        }
+    </style>
+
 @section('title')
     Inicio
 @endsection
 
 
 @section('header-img')
-    <div class="header-image h-screen">
-        <div class="pt-[9%] ">
-            <div class="text-center text-2xl font-extrabold animate__animated animate__backInLeft z-0">
-                LLEVANDO PRODUCTOS DE LA MÁS ALTA CALIDAD
-            </div>
-            <div class=" text-center text-[48px] font-extrabold animate__animated animate__backInRight z-0   ">
-                HASTA LA COMODIDAD DE TU NEGOCIO
-            </div>
-        </div>
-        <div
-            class="mt-[20%] text-white w-[60%] text-[20px] mx-auto font-semibold text-center
-    animate__animated  animate__backInUp  relative z-[2] p-5">
+    <div class="h-screen flex flex-col justify-center items-center text-center relative">
+        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
 
-            “ Somos una distribuidora especializada en ofrecer una amplia gama de productos escenciales para la
-            industria
-            alimentaria y gastronomica, desde harinas de alta calidad hasta grasas, mantecas, azucar, granos y
-            aceites
-            selectos, levaduras, polvos para hornear. Por lo que nos comprometemos a brindarle ingredientes que
-            garanticen el éxito en cada preparacion culinaria. ”
+        <div class="max-w-4xl mx-auto space-y-6 relative z-20 text-white px-4">
+            <div class="text-3xl md:text-5xl lg:text-6xl font-extrabold space-y-4">
+                <div class="opacity-0 animate__animated animate-on-scroll-left">
+                    LLEVANDO PRODUCTOS
+                </div>
+                <div class="text-green-400 opacity-0 animate__animated animate-on-scroll-left">
+                    DE LA MÁS ALTA CALIDAD
+                </div>
+            </div>
+            <div class="text-3xl md:text-5xl lg:text-6xl font-extrabold space-y-4">
+                <div class="opacity-0 animate__animated animate-on-scroll-left">
+                    HASTA LA COMODIDAD
+                </div>
+                <div class="text-green-400 opacity-0 animate__animated animate-on-scroll-left">
+                    DE TU NEGOCIO
+                </div>
+            </div>
+
+            <div
+                class="text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto mt-8 italic animate__animated animate-on-scroll-right">
+                " Somos una distribuidora líder en insumos esenciales para la industria alimentaria y gastronómica.
+                Ofrecemos harinas premium, grasas, azúcares, granos, aceites, levaduras y más. Ingredientes de calidad para
+                garantizar el éxito de cada creación culinaria. "
+            </div>
         </div>
     </div>
+
 @endsection
 @section('main')
-    <div class="suppliers w-[85%] mx-auto my-[8%] font-bold">
-        <div class="text-center leading-none border-b-[2px] pb-2 border-green-800 ">
-            <div class="text-[18px] p-0 m-0">CONOZCA NUESTROS</div>
-            <div class="text-green-800 text-[45px] m-0">PRODUCTOS</div>
+    <div class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <p class="text-sm text-gray-600 uppercase tracking-wide mb-2">CONOZCA NUESTROS</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-green-800">PRODUCTOS</h2>
         </div>
-    </div>
-    <div class="mt-5 p-10 w-full h-[60%] bg-yellow-300 grid grid-cols-[60%,40%]">
-        <div
-            class="font-semibold w-[60%] text-center m-auto text-[26px] uppercase animate-on-scroll-left  animate__animated z-0">
-            Descubra la frescura y calidad de nuestras jaleas en presentaciones <span
-                class="text-green-800 font-extrabold">caja 48 lbs</span> y <span
-                class="text-green-800 font-extrabold">cubeta</span>. Elaboradas
-            con los mejores ingredientes, ideales para repostería y postres.
-            <div class="my-6">
-                <a href="#" class="bg-black px-3 py-2 w-auto text-white text-[15px] rounded-lg">Ver
-                    detalles</a>
+
+        <!-- Jaleas Section -->
+        <div class="grid md:grid-cols-2 gap-10 mb-16 items-center bg-yellow-50 rounded-xl p-8 shadow-lg ">
+            <div class="order-2 md:order-1 text-center md:text-left animate__animated animate-on-scroll-left">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 uppercase">
+                    Jaleas Premium
+                </h3>
+                <p class="text-xl text-gray-700 mb-6">
+                    Descubra la frescura y calidad de nuestras jaleas en presentaciones
+                    <span class="text-green-800 font-extrabold">caja 48 lbs</span> y
+                    <span class="text-green-800 font-extrabold">cubeta</span>.
+                    Elaboradas con los mejores ingredientes, ideales para repostería y postres.
+                </p>
+                <a href="#"
+                    class="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-orange-500 hover:text-black transition-all duration-300">
+                    Ver detalles
+                </a>
             </div>
-        </div>
-        <div
-            class="overflow-hidden w-full    h-full flex justify-center items-center animate-on-scroll-right  animate__animated z-0">
-            <img src="{{ asset('/images/jalea.png') }}" alt="jaleas" class="object-contain w-[80%] h-[100%]">
-        </div>
-    </div>
-
-
-
-    <div class=" w-full h-[60%]  grid grid-cols-[40%,60%]">
-        <div class="overflow-hidden h-full flex justify-center items-center animate-on-scroll-right  animate__animated z-0">
-            <img src="{{ asset('/images/super.png') }}" class="object-contain w-[80%] h-[80%]" alt="harinas">
-        </div>
-        <div
-            class="font-semibold w-[60%] text-center m-auto text-[26px] uppercase animate-on-scroll-left  animate__animated z-0">
-            Adquiera nuestras selectas harinas super en presentaciones de <span
-                class="text-green-800 font-extrabold">arroba</span> y <span
-                class="text-green-800 font-extrabold">quintal</span>, para pupusas y panaderia
-            <div class="my-6 text-[15px]">
-                <a href="#" class="bg-yellow-300 px-3 py-2 w-auto text-black  rounded-lg">Ver
-                    detalles</a>
+            <div class="order-1 md:order-2 flex justify-center animate__animated animate-on-scroll-right">
+                <img src="{{ asset('/images/jalea.png') }}" alt="Jaleas"
+                    class="max-w-full h-auto object-contain transform hover:scale-105 transition-transform duration-300">
             </div>
         </div>
 
-    </div>
-
-    <div class=" w-[85%] mx-auto my-[8%] font-bold">
-        <div class="text-center leading-none border-b-[2px] pb-2 border-green-800  ">
-            <div class="text-[18px] p-0 m-0">CONOZCA NUESTRAS</div>
-            <div class="text-green-800 text-[45px] m-0">CATEGORIAS</div>
-        </div>
-        <div class="mt-5 p-10 w-full">
-            <div class="owl-carousel owl-theme mt-10">
-                <!-- Item 1 -->
-                <div class="item h-80 flex flex-col justify-between">
-                    <img 
-                        src="{{ asset('/images/index/categories/aceites.png') }}" 
-                        alt="Aceites" 
-                        class="w-full h-[85%] rounded-lg shadow-lg object-contain">
-                    <div class="text-center font-semibold mt-2 text-gray-800">
-                        Aceites
-                    </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="item h-80 flex flex-col justify-between">
-                    <img 
-                        src="{{ asset('/images/index/categories/azucar.png') }}" 
-                        alt="Azucares" 
-                        class="w-full h-[85%] rounded-lg shadow-lg object-contain">
-                    <div class="text-center font-semibold mt-2 text-gray-800">
-                        Azucares
-                    </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="item h-80 flex flex-col justify-between">
-                    <img 
-                        src="{{ asset('/images/index/categories/mantecas.png') }}" 
-                        alt="Mantecas" 
-                        class="w-full h-[85%] rounded-lg shadow-lg object-contain">
-                    <div class="text-center font-semibold mt-2 text-gray-800">
-                        Mantecas
-                    </div>
-                </div>
-                <!-- Item 4 -->
-                <div class="item h-80 flex flex-col justify-between">
-                    <img 
-                        src="{{ asset('/images/index/categories/mascotas.png') }}" 
-                        alt="Mascotas" 
-                        class="w-full h-[85%] rounded-lg shadow-lg object-contain">
-                    <div class="text-center font-semibold mt-2 text-gray-800">
-                       Mascotas
-                    </div>
-                </div>
-                <!-- Item 5 -->
-                <div class="item h-80 flex flex-col justify-between">
-                    <img 
-                        src="{{ asset('/images/index/categories/snacks.png') }}" 
-                        alt="Snacks" 
-                        class="w-full h-[85%] rounded-lg shadow-lg object-cover">
-                    <div class="text-center font-semibold mt-2 text-gray-800">
-                        Snacks
-                    </div>
-                </div>
+        <!-- Harinas Section -->
+        <div class="grid md:grid-cols-2 gap-10 mb-16 items-center bg-white rounded-xl p-8 shadow-lg">
+            <div class="flex justify-center animate__animated animate-on-scroll-left">
+                <img src="{{ asset('/images/super.png') }}" alt="Harinas"
+                    class="max-w-full h-auto object-contain transform hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="text-center md:text-left  animate__animated animate-on-scroll-right ">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 uppercase">
+                    Harinas Selectas
+                </h3>
+                <p class="text-xl text-gray-700 mb-6">
+                    Adquiera nuestras selectas harinas super en presentaciones de
+                    <span class="text-green-800 font-extrabold">arroba</span> y
+                    <span class="text-green-800 font-extrabold">quintal</span>,
+                    para pupusas y panadería.
+                </p>
+                <a href="#"
+                    class="inline-block bg-orange-500 text-black px-6 py-3 rounded-lg hover:bg-black hover:text-white transition-all duration-300">
+                    Ver detalles
+                </a>
             </div>
         </div>
-        
-    </div>
 
-   
-
-    <div class="mx-auto my-[5%] font-bold">
-        <div class="w-[85%] m-auto leading-none border-b-[2px] pb-2 border-green-800">
-            <div class="text-[18px] p-0 m-0 text-center">DESCUBRA NUESTROS PUNTOS DE</div>
-            <div class="text-green-800 text-[45px] m-0 text-center">PROCESAMIENTO | DISTRIBUCIÓN</div>
-        </div>
-        <div class="mt-[7%] h-[80vh] bg-black">
-            <div class="grid grid-cols-3 w-[90%] m-auto gap-4">
-                <!-- Planta Jaleas -->
-                <div class="flex flex-col justify-center items-center h-[80vh] text-center p-4 text-white  ">
-                    <h3 class="text-xl font-bold text-orange-500 mb-2">PLANTA JALEAS</h3>
-                    <p class="text-sm  mb-4">KM 10 1/2 A UN COSTADO DE VIDRERÍA VENECIA, SAN MARTÍN, SAN SALVADOR</p>
-                    <img src="{{ asset('images/index/planta-jaleas.jpg') }}" alt="planta jaleas"
-                        class="w-[350px] h-[400px] object-cover rounded-md">
-                </div>
-                <!-- Bodega Central -->
-                <div class="flex flex-col justify-center items-center h-[80vh] text-center p-4 bg-white ">
-                    <h3 class="text-lg font-bold text-orange-500 mb-2">BODEGA CENTRAL</h3>
-                    <p class="text-sm  mb-4">KM 10 1/2 A UN COSTADO DE VIDRERÍA VENECIA, SAN MARTÍN, SAN SALVADOR</p>
-                    <img src="{{ asset('images/index/bodega-central.jpg') }}" alt="bodega central"
-                        class="w-[350px] h-[400px] object-cover rounded-md">
-                </div>
-                <!-- Planta Molinos -->
-                <div class="flex flex-col justify-center items-center h-[80vh] text-center p-4 text-white">
-                    <h3 class="text-lg font-bold text-orange-500 mb-2">PLANTA MOLINOS</h3>
-                    <p class="text-sm  mb-4">KM 10 1/2 A UN COSTADO DE VIDRERÍA VENECIA, SAN MARTÍN, SAN SALVADOR</p>
-                    <img src="{{ asset('images/index/planta-molinos.png') }}" alt="molinos"
-                        class="w-[350px] h-[400px] object-cover rounded-md">
-                </div>
+        <!-- Huevos Section -->
+        <div class="grid md:grid-cols-2 gap-10 items-center bg-gray-900 rounded-xl p-8 shadow-lg text-white">
+            <div class="order-2 md:order-1 text-center md:text-left animate__animated animate-on-scroll-left">
+                <h3 class="text-2xl md:text-3xl font-bold text-orange-500 mb-6 uppercase">
+                    Huevos Frescos
+                </h3>
+                <p class="text-xl mb-6">
+                    Descubra la frescura y calidad de nuestros huevos en presentaciones
+                    <span class="text-green-400 font-extrabold">pequeña</span>,
+                    <span class="text-green-400 font-extrabold">mediana</span>,
+                    <span class="text-green-400 font-extrabold">grande</span>, y
+                    <span class="text-green-400 font-extrabold">extragrande</span>.
+                    Perfectos para todas sus necesidades culinarias.
+                </p>
+                <a href="#"
+                    class="inline-block bg-white text-black px-6 py-3 rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300">
+                    Ver detalles
+                </a>
             </div>
-
+            <div class="order-1 md:order-2 flex justify-center animate__animated animate-on-scroll-right">
+                <img src="{{ asset('/images/super.png') }}" alt="Huevos"
+                    class="max-w-full h-auto object-contain transform hover:scale-105 transition-transform duration-300">
+            </div>
         </div>
     </div>
 
 
-    <div class=" w-[85%] mx-auto my-[5%] font-bold">
-        <div class="text-center leading-none border-b-[2px] pb-2 border-green-800  ">
-            <div class="text-[18px] p-0 m-0">NUESTROS PRINCIPALES</div>
-            <div class="text-green-800 text-[45px] m-0">PROVEEDORES</div>
+    <div class="w-full max-w-6xl mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <p class="text-sm text-gray-600 uppercase tracking-wide mb-2">CONOZCA NUESTRAS</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-green-800">CATEGORÍAS</h2>
         </div>
-        <div class=" mt-[7%]">
-            <div class="grid grid-cols-4 w-[80%] m-auto ">
-                <div class="flex justify-center items-center">
-                    <div class="">
-                        <img src="{{ asset('images/suppliers/agropal.png') }}" alt="copeagropal">
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
+            @php $categories = [['name' => 'Grasas y Aceites', 'image' => '/images/index/categories/aceites.png'], ['name' => 'Azucares', 'image' => '/images/index/categories/azucar.png'], ['name' => 'Mantecas', 'image' => '/images/index/categories/mantecas.png'], ['name' => 'Mascotas', 'image' => '/images/index/categories/mascotas.png'], ['name' => 'Snacks', 'image' => '/images/index/categories/snacks.png']]; @endphp
+
+            @foreach ($categories as $category)
+                <div
+                    class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="h-64 flex flex-col justify-between p-4">
+                        <img src="{{ asset($category['image']) }}" alt="{{ $category['name'] }}"
+                            class="w-full h-[85%] object-contain rounded-lg">
+                        <div class="text-center font-semibold mt-2 text-gray-800 text-sm md:text-base">
+                            {{ $category['name'] }}
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-center items-center">
-                    <div class="">
-                        <img src="{{ asset('images/suppliers/disali.jpeg') }}" alt="agropal">
-                    </div>
-                </div>
-                <div class="flex justify-center items-center">
-                    <div class="">
-                        <img src="{{ asset('images/suppliers/logomolinos.png') }}" alt="molinos">
-                    </div>
-                </div>
-                <div class="flex justify-center items-center">
-                    <div class="">
-                        <img src="{{ asset('images/suppliers/levuni.jpeg') }}" alt="levuni">
-                    </div>
-                </div>
+            @endforeach
+        </div>
+    </div>
+
+
+
+    <div class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-sm text-gray-600 uppercase tracking-wide mb-2">DESCUBRA NUESTROS PUNTOS DE</p>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-green-800">PROCESAMIENTO | DISTRIBUCIÓN</h2>
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                @php $locations = [
+                        [
+                            'name' => 'PLANTA JALEAS',
+                            'address' => 'Colonia Vista Hermosa, Ave. Vista Hermosa, Casa #220, San Salvador',
+                            'image' => '/images/index/planta-jaleas.jpg',
+                            'textColor' => 'text-yellow-300',
+                            'bgColor' => 'bg-black',
+                        ],
+                        [
+                            'name' => 'BODEGA CENTRAL',
+                            'address' => '10 Calle. Ote Carretera de Oro 1-A # 223 fte a Col. Altavista',
+                            'image' => '/images/index/bodega-central.jpg',
+                            'textColor' => 'text-green-800',
+                            'bgColor' => 'bg-white',
+                        ],
+                        [
+                            'name' => 'PLANTA MOLINOS',
+                            'address' => 'KM 10 1/2 A UN COSTADO DE VIDRERÍA VENECIA, SAN MARTÍN, SAN SALVADOR',
+                            'image' => '/images/index/planta-molinos.png',
+                            'textColor' => 'text-yellow-300',
+                            'bgColor' => 'bg-black',
+                        ],
+                ]; @endphp
+
+                @foreach ($locations as $location)
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105">
+                        <div class="{{ $location['bgColor'] }} text-white p-6 text-center">
+                            <h3 class="text-2xl font-bold {{ $location['textColor'] }} mb-4">{{ $location['name'] }}</h3>
+                            <p class="text-sm mb-4 flex items-center justify-center">
+                                <i class="lni lni-map-marker-5 mr-2"></i>
+                                {{ $location['address'] }}
+                            </p>
+                        </div>
+                        <img src="{{ asset($location['image']) }}" alt="{{ $location['name'] }}"
+                            class="w-full h-64 object-cover">
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>>
+
+
+    <div class="w-full max-w-screen-2xl mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <p class="text-md text-gray-600 uppercase tracking-wide mb-2 font-semibold">NUESTROS PRINCIPALES</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-green-800">PROVEEDORES</h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 w-full max-w-screen-2xl mx-auto">
+            @php $suppliers = [['logo' => 'copeagropal-logo.png', 'name' => 'Copeagropal'], ['logo' => 'disali-logo.jpeg', 'name' => 'Disali'], ['logo' => 'molinos-logo.png', 'name' => 'Molinos'], ['logo' => 'levuni-logo.png', 'name' => 'Levuni'], ['logo' => 'mor-logo.webp', 'name' => 'Mor']]; @endphp
+
+            @foreach ($suppliers as $supplier)
+                <div
+                    class="flex justify-center items-center p-6 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 scale-100 hover:scale-105">
+                    <img src="{{ asset('images/suppliers/' . $supplier['logo']) }}" alt="{{ $supplier['name'] }}"
+                        class="max-h-32 object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection
@@ -255,14 +266,14 @@
         });
         $(document).ready(function() {
             $(".owl-carousel").owlCarousel({
-                items: 4, 
+                items: 4,
                 margin: 20,
-                autoplay: true, 
-                autoplayTimeout: 3000, 
+                autoplay: true,
+                autoplayTimeout: 3000,
                 autoplayHoverPause: false,
-                loop: true, 
-                nav: true, 
-                responsive: { 
+                loop: true,
+                nav: true,
+                responsive: {
                     0: {
                         items: 1
                     },
@@ -277,9 +288,10 @@
                     }
                 },
                 navText: [
-                    '<button class="text-white  font-extrabold bg-gray-800 hover:bg-orange-600 py-2 px-5 my-5 rounded-full">&lt;</button>',
-                    '<button class="text-white font-extrabold bg-gray-800 hover:bg-orange-600 py-2 px-5 my-5 rounded-full">&gt;</button>'
+                    '<button class="text-white font-extrabold bg-gray-800 hover:bg-orange-600 h-10 w-10 flex items-center justify-center rounded-full">&lt;</button>',
+                    '<button class="text-white font-extrabold bg-gray-800 hover:bg-orange-600 h-10 w-10 flex items-center justify-center rounded-full">&gt;</button>'
                 ]
+
             });
         });
     </script>
