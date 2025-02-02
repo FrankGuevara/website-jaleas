@@ -26,22 +26,23 @@
     <header>
 
         <div class=" overflow-hidden ">
-            <div class="bg-white grayscale-0 {{ Route::is('index') ? 'fixed' : '' }} w-full z-50 border border-gray-300">
+            <div
+                class="bg-white grayscale-0 {{ Route::is('index') ? 'fixed' : '' }} w-full z-50 border border-gray-300">
                 <nav class="font-semibold w-[90%] m-auto relative py-3 z-1000">
-                    <!-- Contenedor flex para logo y botón -->
                     <div class="flex justify-between items-center">
                         <a href="{{ route('index') }}">
-                            <img width="300px" height="40px" src="{{ asset('images/logo.jpeg') }}" alt="logo-jaleas" class="max-w-[200px] lg:max-w-[300px]"/>
+                            <img width="300px" height="40px" src="{{ asset('images/logo.jpeg') }}" alt="logo-jaleas"
+                                class="max-w-[200px] lg:max-w-[300px]" />
                         </a>
-                        
-                        <!-- Botón hamburguesa - visible solo en móvil -->
+
                         <button id="menuBtn" class="block lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
-            
-                        <!-- Menú escritorio - oculto en móvil -->
+
                         <div class="hidden lg:flex font-bold">
                             <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500">
                                 <a href="{{ route('index') }}">Inicio</a>
@@ -49,50 +50,107 @@
                             <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500">
                                 <a href="{{ route('about') }}">Nosotros</a>
                             </div>
-                            <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500">
-                                <a href="#">Productos</a>
+
+                            <!-- Menú desplegable -->
+                            <div class="relative my-auto p-2 hover:text-orange-500">
+                                <button id="productosBtn"
+                                    class="flex items-center hover:border-b-2 hover:border-b-orange-500">
+                                    Productos
+                                    <svg id="productosIcon" xmlns="http://www.w3.org/2000/svg"
+                                        class="ml-2 h-4 w-4 transition-transform" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div id="productosMenu"
+                                    class="hidden absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg">
+                                    <a href="#" class="block px-4 py-2 hover:bg-orange-100">Harinas</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-orange-100">Mantecas</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-orange-100">Aceites</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-orange-100">Alimento para
+                                        perros</a>
+                                </div>
                             </div>
+
                             <div class="my-auto p-2 hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500">
                                 <a href="{{ route('contact') }}">Contáctanos</a>
                             </div>
                         </div>
                     </div>
-            
-                    <!-- Menú móvil - inicialmente oculto -->
+
+                    <!-- Menú móvil -->
                     <div id="mobileMenu" class="hidden lg:hidden w-full">
                         <div class="flex flex-col mt-4">
                             <a href="{{ route('index') }}" class="py-2 hover:text-orange-500">Inicio</a>
                             <a href="{{ route('about') }}" class="py-2 hover:text-orange-500">Nosotros</a>
-                            <a href="#" class="py-2 hover:text-orange-500">Productos</a>
+
+                            <!-- Menú desplegable en móvil -->
+                            <div>
+                                <button id="productosBtnMobile"
+                                    class="py-2 w-full flex items-center text-left hover:text-orange-500">
+                                    Productos
+                                    <svg id="productosIconMobile" xmlns="http://www.w3.org/2000/svg"
+                                        class="ml-2 h-4 w-4 transition-transform" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="productosMenuMobile" class="hidden ml-4">
+                                    <a href="#" class="block py-2 hover:text-orange-500">Harinas</a>
+                                    <a href="#" class="block py-2 hover:text-orange-500">Mantecas</a>
+                                    <a href="#" class="block py-2 hover:text-orange-500">Aceites</a>
+                                    <a href="#" class="block py-2 hover:text-orange-500">Alimento para perros</a>
+                                </div>
+                            </div>
+
                             <a href="{{ route('contact') }}" class="py-2 hover:text-orange-500">Contáctanos</a>
                         </div>
                     </div>
                 </nav>
             </div>
-            
+
             <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const menuBtn = document.getElementById('menuBtn');
-                const mobileMenu = document.getElementById('mobileMenu');
-                
-                menuBtn.addEventListener('click', function() {
-                    // Toggle menu móvil
-                    mobileMenu.classList.toggle('hidden');
-                    
-                    // Cambiar ícono
-                    const svg = menuBtn.querySelector('svg');
-                    if (mobileMenu.classList.contains('hidden')) {
-                        svg.innerHTML = `
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        `;
-                    } else {
-                        svg.innerHTML = `
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        `;
-                    }
+                document.addEventListener('DOMContentLoaded', function() {
+                    const menuBtn = document.getElementById('menuBtn');
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    const productosBtn = document.getElementById('productosBtn');
+                    const productosMenu = document.getElementById('productosMenu');
+                    const productosIcon = document.getElementById('productosIcon');
+                    const productosBtnMobile = document.getElementById('productosBtnMobile');
+                    const productosMenuMobile = document.getElementById('productosMenuMobile');
+                    const productosIconMobile = document.getElementById('productosIconMobile');
+
+                    // Menú hamburguesa para móvil
+                    menuBtn.addEventListener('click', function() {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+
+                    // Menú desplegable en desktop con icono rotatorio
+                    productosBtn.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                        productosMenu.classList.toggle('hidden');
+                        productosIcon.classList.toggle('rotate-180');
+                    });
+
+                    // Menú desplegable en móvil con icono rotatorio
+                    productosBtnMobile.addEventListener('click', function() {
+                        productosMenuMobile.classList.toggle('hidden');
+                        productosIconMobile.classList.toggle('rotate-180');
+                    });
+
+                    // Cierra el menú si se hace clic fuera de él
+                    document.addEventListener('click', function(event) {
+                        if (!productosMenu.contains(event.target) && event.target !== productosBtn) {
+                            productosMenu.classList.add('hidden');
+                            productosIcon.classList.remove('rotate-180');
+                        }
+                    });
                 });
-            });
             </script>
+
             <div class="header-image">
                 @yield('header-img')
             </div>
@@ -114,7 +172,8 @@
             <!-- Primera columna: Logo y eslogan -->
             <div class="text-center w-full md:w-[80%] mx-auto flex flex-col items-center">
                 <div class="w-60 h-32 mb-4">
-                    <img src="{{ asset('images/footer-img.jpeg') }}" alt="Logo" class="w-full h-full object-contain">
+                    <img src="{{ asset('images/footer-img.jpeg') }}" alt="Logo"
+                        class="w-full h-full object-contain">
                 </div>
                 <div class="font-semibold text-[15px] text-center">
                     "Vendemos servicios y distribuimos calidad"
@@ -126,11 +185,13 @@
                 <div class="text-center">
                     <div class="font-bold text-orange-500 text-[20px]">SIGUENOS EN:</div>
                     <div class="grid grid-cols-1 gap-y-4 my-8">
-                        <a href="/" class="font-semibold flex items-center justify-center">
+                        <a href="https://www.facebook.com/p/Jaleas-del-pino-SV-61560104366460/"
+                            class="font-semibold flex items-center justify-center">
                             <i class="lni lni-facebook text-3xl pr-3"></i>
                             Jaleas del Pino. SA
                         </a>
-                        <a href="/" class="font-semibold flex items-center justify-center">
+                        <a href="https://www.instagram.com/jaleasdelpino.sv?igsh=YzljYTk1ODg3Zg=="
+                            class="font-semibold flex items-center justify-center">
                             <i class="lni lni-instagram text-3xl pr-3"></i>
                             Jaleas del Pino. SA
                         </a>
@@ -147,14 +208,15 @@
                             <i class="far fa-envelope text-2xl"></i>
                             <span class="pl-4 font-semibold">svjaleasdelpino@gmail.com</span>
                         </a>
-                        <a href="/" class="font-bold flex items-center justify-center">
+                        <div class="font-bold flex items-center justify-center">
                             <i class="lni lni-telephone-3 text-3xl"></i>
                             <span class="pl-4 font-semibold">+503 7512-3153</span>
-                        </a>
-                        <a href="/" class="font-bold flex items-center justify-center">
+                        </div>
+                        <div class="font-bold flex items-center justify-center">
                             <i class="lni lni-whatsapp text-2xl"></i>
                             <span class="pl-4 font-semibold">+503 7512-3153</span>
-                        </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
